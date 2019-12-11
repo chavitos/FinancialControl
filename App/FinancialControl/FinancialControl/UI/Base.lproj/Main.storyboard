@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O4K-EL-20R">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Estatísticas-->
+        <scene sceneID="OB7-4Q-gfY">
+            <objects>
+                <viewController id="CtT-mi-efW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uip-KQ-B3t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="npa-7t-HyN"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Estatísticas" id="E7A-gZ-grp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JQe-ix-JxX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="861"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="YNM-Z3-lAv">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="O4K-EL-20R" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="baO-XI-mYT">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cnp-Nk-L90" kind="relationship" relationship="viewControllers" id="Kze-tA-77l"/>
+                        <segue destination="CtT-mi-efW" kind="relationship" relationship="viewControllers" id="rFE-21-YcW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAX-U5-t5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--Histórico-->
+        <scene sceneID="1f9-Cd-VDK">
+            <objects>
+                <viewController id="cnp-Nk-L90" customClass="HistoryViewController" customModule="FinancialControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hRZ-FM-0J0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-iW-mIX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="expenseCell" rowHeight="70" id="VvZ-o0-hVd" customClass="ExpenseTableViewCell" customModule="FinancialControl" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VvZ-o0-hVd" id="KjZ-ho-nXf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="McDonalds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKk-Df-mE1">
+                                                    <rect key="frame" x="8" y="8" width="104" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="- R$ 99999,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXR-ya-hFp">
+                                                    <rect key="frame" x="122" y="8" width="284" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/11/2019" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ug-sh-EIa">
+                                                    <rect key="frame" x="8" y="40" width="80" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alimentação" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJg-ZG-C4y">
+                                                    <rect key="frame" x="108" y="40" width="94" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AJg-ZG-C4y" firstAttribute="leading" secondItem="9Ug-sh-EIa" secondAttribute="trailing" constant="20" id="1Pj-Vn-Zqf"/>
+                                                <constraint firstItem="wKk-Df-mE1" firstAttribute="leading" secondItem="KjZ-ho-nXf" secondAttribute="leading" constant="8" id="5cH-y5-5q7"/>
+                                                <constraint firstItem="wKk-Df-mE1" firstAttribute="top" secondItem="KjZ-ho-nXf" secondAttribute="top" constant="8" id="E6e-Dz-wO1"/>
+                                                <constraint firstItem="AJg-ZG-C4y" firstAttribute="top" secondItem="9Ug-sh-EIa" secondAttribute="top" id="FKg-87-ZF8"/>
+                                                <constraint firstItem="WXR-ya-hFp" firstAttribute="top" secondItem="KjZ-ho-nXf" secondAttribute="top" constant="8" id="G1l-ab-hH2"/>
+                                                <constraint firstItem="9Ug-sh-EIa" firstAttribute="top" secondItem="wKk-Df-mE1" secondAttribute="bottom" constant="8" id="Lng-3I-jI0"/>
+                                                <constraint firstItem="9Ug-sh-EIa" firstAttribute="leading" secondItem="KjZ-ho-nXf" secondAttribute="leading" constant="8" id="fMY-9a-RiT"/>
+                                                <constraint firstItem="WXR-ya-hFp" firstAttribute="leading" secondItem="wKk-Df-mE1" secondAttribute="trailing" constant="10" id="htv-MS-ypZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="WXR-ya-hFp" secondAttribute="trailing" constant="8" id="tBf-sh-C2O"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="9Ug-sh-EIa" id="YvI-aC-4i0"/>
+                                            <outlet property="nameLable" destination="wKk-Df-mE1" id="SbG-px-Z8p"/>
+                                            <outlet property="typeLabel" destination="AJg-ZG-C4y" id="DvM-GD-9P1"/>
+                                            <outlet property="valueLabel" destination="WXR-ya-hFp" id="RkI-MM-JyC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sQc-iW-mIX" firstAttribute="top" secondItem="20c-19-Yo3" secondAttribute="top" id="FYt-I9-MGY"/>
+                            <constraint firstItem="20c-19-Yo3" firstAttribute="bottom" secondItem="sQc-iW-mIX" secondAttribute="bottom" id="O5p-ow-RUj"/>
+                            <constraint firstItem="sQc-iW-mIX" firstAttribute="leading" secondItem="20c-19-Yo3" secondAttribute="leading" id="Yiy-OV-ucC"/>
+                            <constraint firstItem="20c-19-Yo3" firstAttribute="trailing" secondItem="sQc-iW-mIX" secondAttribute="trailing" id="vwW-8S-K4w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="20c-19-Yo3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Histórico" id="56D-5k-S9Q"/>
+                    <connections>
+                        <outlet property="tableView" destination="sQc-iW-mIX" id="g7f-5t-SgW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3tV-Lz-jqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1176.8115942028987" y="142.63392857142856"/>
+        </scene>
+    </scenes>
+</document>
