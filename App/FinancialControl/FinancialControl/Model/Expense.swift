@@ -9,8 +9,8 @@
 import Foundation
 
 struct Expense: Codable {
-    var name: String
-    var date: Date
-    var type: String
-    var value: Double
+    var name: String?
+    var date: Date?
+    var type: String?
+    var value: Double?
 }

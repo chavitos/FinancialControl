@@ -9,7 +9,6 @@
 import UIKit
 
 class HistoryViewController: UIViewController {
-
     var expenses: [Expense] = []
     
     @IBOutlet weak var tableView: UITableView!
@@ -19,13 +18,7 @@ class HistoryViewController: UIViewController {
 
         self.tableView.dataSource = self
         
-        let expense1 = Expense(name: "McDonalds", date: Date(), type: "Alimentação", value: 200.0)
-        let expense2 = Expense(name: "Seguro da casa", date: Date(), type: "Casa", value: 200.0)
-        let expense3 = Expense(name: "Barbearia", date: Date(), type: "Cuidado", value: 200.0)
-        
-        expenses.append(expense1)
-        expenses.append(expense2)
-        expenses.append(expense3)
+        let expenses = ExpenseManager.getAll()
     }
 }
 

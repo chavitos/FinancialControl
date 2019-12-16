@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01BC26B323A8298300B6445A /* ExpenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BC26B223A8298300B6445A /* ExpenseManager.swift */; };
 		E933E88423A18D770076847E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E933E88323A18D770076847E /* AppDelegate.swift */; };
 		E933E88623A18D770076847E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E933E88523A18D770076847E /* SceneDelegate.swift */; };
 		E933E88B23A18D770076847E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E933E88923A18D770076847E /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01BC26B223A8298300B6445A /* ExpenseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseManager.swift; sourceTree = "<group>"; };
 		E933E88023A18D770076847E /* FinancialControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancialControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E933E88323A18D770076847E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E933E88523A18D770076847E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01BC26AF23A8172400B6445A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E9F0EB8723A1AB38001BBC52 /* NetworkManager.swift */,
+				01BC26B223A8298300B6445A /* ExpenseManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		E933E87723A18D770076847E = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +116,7 @@
 		E933E88223A18D770076847E /* FinancialControl */ = {
 			isa = PBXGroup;
 			children = (
+				01BC26AF23A8172400B6445A /* Manager */,
 				E9F0EB8423A1AA95001BBC52 /* Scene */,
 				E9F0EB8323A1AA80001BBC52 /* Helper */,
 				E9F0EB8223A1AA72001BBC52 /* Model */,
@@ -155,7 +167,6 @@
 		E9F0EB8323A1AA80001BBC52 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				E9F0EB8723A1AB38001BBC52 /* NetworkManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -309,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9F0EB8823A1AB38001BBC52 /* NetworkManager.swift in Sources */,
+				01BC26B323A8298300B6445A /* ExpenseManager.swift in Sources */,
 				E9F0EB7E23A1A0C8001BBC52 /* ExpenseTableViewCell.swift in Sources */,
 				E933E8B523A196030076847E /* HistoryViewController.swift in Sources */,
 				E933E88423A18D770076847E /* AppDelegate.swift in Sources */,
@@ -497,7 +509,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tempest.FinancialControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -517,7 +529,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tempest.FinancialControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -530,7 +542,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = FinancialControlTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -538,7 +550,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tempest.FinancialControlTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinancialControl.app/FinancialControl";
 			};
@@ -552,7 +564,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = FinancialControlTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -560,7 +572,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tempest.FinancialControlTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinancialControl.app/FinancialControl";
 			};
@@ -573,6 +585,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = FinancialControlUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -580,7 +593,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tempest.FinancialControlUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FinancialControl;
 			};
@@ -593,6 +606,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
 				INFOPLIST_FILE = FinancialControlUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -600,7 +614,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.tempest.FinancialControlUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FinancialControl;
 			};
