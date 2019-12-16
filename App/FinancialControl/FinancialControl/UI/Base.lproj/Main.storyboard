@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O4K-EL-20R">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O4K-EL-20R">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="uip-KQ-B3t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="npa-7t-HyN"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Estatísticas" id="E7A-gZ-grp"/>
@@ -35,7 +36,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="cnp-Nk-L90" kind="relationship" relationship="viewControllers" id="Kze-tA-77l"/>
+                        <segue destination="H9r-h2-DFC" kind="relationship" relationship="viewControllers" id="Kze-tA-77l"/>
                         <segue destination="CtT-mi-efW" kind="relationship" relationship="viewControllers" id="rFE-21-YcW"/>
                     </connections>
                 </tabBarController>
@@ -43,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
-        <!--Histórico-->
+        <!--Despesas-->
         <scene sceneID="1f9-Cd-VDK">
             <objects>
                 <viewController id="cnp-Nk-L90" customClass="HistoryViewController" customModule="FinancialControl" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,14 +53,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-iW-mIX">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="expenseCell" rowHeight="70" id="VvZ-o0-hVd" customClass="ExpenseTableViewCell" customModule="FinancialControl" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VvZ-o0-hVd" id="KjZ-ho-nXf">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="McDonalds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKk-Df-mE1">
@@ -109,7 +110,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sQc-iW-mIX" firstAttribute="top" secondItem="20c-19-Yo3" secondAttribute="top" id="FYt-I9-MGY"/>
                             <constraint firstItem="20c-19-Yo3" firstAttribute="bottom" secondItem="sQc-iW-mIX" secondAttribute="bottom" id="O5p-ow-RUj"/>
@@ -118,14 +119,54 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="20c-19-Yo3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Histórico" id="56D-5k-S9Q"/>
+                    <navigationItem key="navigationItem" title="Despesas" id="U4g-8G-hz2">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="L6E-cT-uaG">
+                            <connections>
+                                <segue destination="VeS-Zv-5DH" kind="show" id="QB6-4U-Q92"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="sQc-iW-mIX" id="g7f-5t-SgW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3tV-Lz-jqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1926" y="143"/>
+        </scene>
+        <!--Histórico-->
+        <scene sceneID="hbq-VK-jBO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H9r-h2-DFC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Histórico" id="56D-5k-S9Q"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Kf-sz-WhC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cnp-Nk-L90" kind="relationship" relationship="rootViewController" id="bY2-e0-uIg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AxC-pR-5nY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="1176.8115942028987" y="142.63392857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kAK-ia-zpX">
+            <objects>
+                <viewController id="VeS-Zv-5DH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h89-4d-Lj8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="UE1-mJ-uFS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rgb-XU-3xG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2652" y="143"/>
         </scene>
     </scenes>
 </document>
