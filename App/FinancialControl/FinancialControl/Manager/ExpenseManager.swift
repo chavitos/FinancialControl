@@ -11,7 +11,7 @@ import Foundation
 
 class ExpenseManager {
     
-    let url = ""
+    let url = "http://localhost:3002/v1/expenses/"
     
     func getAll(completion: @escaping (([Expense]) -> Void)) {
         NetworkManager.request(type: HttpMethod.GET, withUrl: url) { (data, response, error) in

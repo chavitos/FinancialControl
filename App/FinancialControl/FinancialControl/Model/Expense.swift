@@ -10,7 +10,7 @@ import Foundation
 
 struct Expense: Codable {
     var name: String?
-    var date: Date?
+    var date: String?
     var type: String?
     var value: Double?
 }

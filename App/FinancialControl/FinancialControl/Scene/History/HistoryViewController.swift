@@ -18,7 +18,14 @@ class HistoryViewController: UIViewController {
 
         self.tableView.dataSource = self
         
-        let expenses = ExpenseManager.getAll()
+        ExpenseManager().getAll(completion:{ expenses in
+            
+            self.expenses = expenses
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        })
     }
 }
 
